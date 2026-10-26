@@ -1,0 +1,61 @@
+# Evidence in reports/layout-disasm.txt and layout-more.txt.
+[symbols]
+D3DDevice_SetVertexShaderConstant = 0x122710 # stdcall; signed register plus 96 hardware bias
+D3DDevice_LoadVertexShaderProgram = 0x1222A0 # program header then instruction words; two args
+D3DDevice_RunPushBuffer = 0x125250 # two args; size at +12 includes terminal jump
+IDirectSoundBuffer_SetPitch = 0x136D98 # crash return 0x136DB1; stdcall two arguments
+IDirectSoundStream_SetFrequency = 0x137A18 # public wrapper calls common voice directly
+IDirectSoundStream_SetVolume = 0x1370BF # early wrapper calls common voice directly
+IDirectSoundStream_SetPitch = 0x1370D3 # early wrapper calls CDirectSoundVoice_SetPitch
+D3DDevice_DrawIndexedVerticesUP = 0x1236D0 # five stack args, scanner and callsite verified
+D3DDevice_MakeSpace = 0x12A5A0 # thiscall, zero stack args; caller 0x12A84B
+D3D_MakeRequestedSpace = 0x12A860 # two stack args; return value is push pointer
+D3DDevice_Present = 0x1263C0 # 3911/3925 four-argument API
+D3D_InitDefaultState = 0x12ACB0 # initializes transforms, RS and TSS; ret with no stack args
+CDirectSoundStream_GetStatus = 0x136574 # XbSymbolDatabase GetStatus__r1
+
+[data]
+D3D_Device = 0x132890 # Direct3D_CreateDevice at 0x12419B and 0x1241A0
+D3D_DirtyFlags = 0x132898 # device + 8, SetRenderState at 0x11FF35
+D3D_SimpleRenderStateEncode = 0x1A1F20 # SetRenderState at 0x11FF0A
+D3D_FvfShader = 0x132718 # device init 0x12B67A
+DSound_StreamVtable = 0x19536C # constructor 0x137CDB
+DSound_StreamVtable2 = 0x195360 # constructor 0x137CD4
+
+[layout]
+CDevice_Push = 0 # 0x12A844
+CDevice_PushThreshold = 4 # 0x12A846
+CDevice_ZScale = 0x4F8 # 0x1276F7
+CDevice_SuperSampleX = 0x500 # 0x1276A7
+CDevice_SuperSampleY = 0x504 # 0x1276CD
+CDevice_Transforms = 0x880 # SetTransform: (state + 0x22) * 64
+CDevice_RenderTarget = 0x40C # GetRenderTarget 0x11EDB5
+CDevice_Depth = 0x410 # GetDepthStencilSurface 0x11EDD5
+CDevice_EmbeddedBuffers = 0x2150 # GetBackBuffer 0x11E8CE: inline 24-byte headers
+CDevice_SwapCount = 0x2B60 # Present 0x1263FC
+CDevice_VBlankCount = 0x2B28 # GetDisplayFieldStatus 0x11F635
+CDevice_VBlankEvent = 0x24F0 # BlockUntilVerticalBlank 0x11DCA7
+CDevice_VBlankCallback = 0x24EC # SetVerticalBlankCallback 0x11DC7A
+CDevice_GammaRamps = 0x251C # GetGammaRamp 0x11D6A7; two 768-byte ramps
+CDevice_GammaPending = 0x2B1C # SetGammaRamp: device+0x2308+0x814
+CDevice_GammaIndex = 0x2B24 # GetGammaRamp 0x11D695
+CDevice_Size = 0x2B90 # static device [0x132890,0x135420); last field seen +0x2B88
+CDevice_Flags = 0xC # CreateDevice 0x1241BE
+CDevice_Time = 0x1C # SetTexture 0x11F27D
+CDevice_Viewport = 0xB00 # SetViewport 0x11EEFD through 0x11EF21
+DirtyFlags_Texture = 0x408 # SetTexture 0x11F2D2,0x11F396,0x11F3A8
+TextureState_Stage = 32 # 0x200-byte four-stage array [0x132218,0x132418)
+Stream_Size = 12 # SetStreamSource 0x12212B-0x12212E
+Stream_Stride = 0 # 0x12218A
+Stream_Buffer = 8 # 0x122184
+PixelShader_Definition = 8 # pointer to definition stored at 0x1268D1
+EffectsImage_Skip0 = 0x804 # 0x1397C2
+EffectsImage_Skip1 = 0x80C # 0x1397BC
+EffectsImage_Desc = 0x818 # 0x1397CA
+CDirectSoundStream_Vtable = 0 # 0x137CDB
+CDirectSoundStream_Vtable2 = 4 # 0x137CCA,0x137CD4
+DSound_MixBinsMask = 1 # XDK <=4034 uses mask, not DSMIXBINS pointer
+RenderStateVersion = 3925 # numeric state table verified against binary globals
+
+[functions]
+0x000F3195 = "crt_thread_notification" # indirect callback observed at return 0xE7384

@@ -1,0 +1,1151 @@
+{
+  "locale": "es-ES",
+  "scope": "Visible text in english.xbr textures; voices excluded",
+  "brand": "Azurik: Rise of Perathia (logotipo original conservado)",
+  "entries": [
+    {
+      "id": 0,
+      "resource": "loc/english/interface/controller.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Se ha desconectado el mando activo.\nVuelve a conectarlo y pulsa START para continuar.",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 1,
+      "resource": "loc/english/interface/loading.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Cargando...",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 2,
+      "resource": "loc/english/interface/saving.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Guardando...",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 3,
+      "resource": "loc/english/interface/loadgame/dashboard-no.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "¿Salir al menú de Xbox?\nNo\nSí",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 4,
+      "resource": "loc/english/interface/loadgame/dashboard-yes.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "¿Salir al menú de Xbox?\nNo\nSí",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 5,
+      "resource": "loc/english/interface/loadgame/delete-no.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "¿Borrar la partida?\nNo\nSí",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 6,
+      "resource": "loc/english/interface/loadgame/delete-yes.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "¿Borrar la partida?\nNo\nSí",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 7,
+      "resource": "loc/english/interface/loadgame/foreground.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Desplazarse · A Seleccionar · Y Borrar · B Volver",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 8,
+      "resource": "loc/english/interface/loadgame/notenoughspace.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Tu Xbox no tiene suficientes bloques libres para guardar partidas.\nPulsa A para continuar sin guardar o B para liberar espacio.\nB Menú de Xbox · A Continuar",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 9,
+      "resource": "loc/english/interface/loadgame/savegamecorrupt.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "No se puede cargar la partida guardada.\nA Continuar",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 10,
+      "resource": "loc/english/interface/loadgame/toomany.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Hay demasiadas partidas guardadas.\nPulsa A para continuar sin guardar o B para liberar espacio.\nB Menú de Xbox · A Continuar",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 11,
+      "resource": "loc/english/interface/menu/menu-options.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Continuar\nOpciones\nSalir\nDesplazarse · A Seleccionar · B Volver",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 12,
+      "resource": "loc/english/interface/menu/menu-quit.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Continuar\nOpciones\nSalir\nDesplazarse · A Seleccionar · B Volver",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 13,
+      "resource": "loc/english/interface/menu/menu-resume.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Continuar\nOpciones\nSalir\nDesplazarse · A Seleccionar · B Volver",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 14,
+      "resource": "loc/english/interface/menu/menu2-easy.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 15,
+      "resource": "loc/english/interface/menu/menu2-rumble-off.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 16,
+      "resource": "loc/english/interface/menu/menu2-rumble-on.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 17,
+      "resource": "loc/english/interface/menu/menu2-music.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Sonido\nVolumen de efectos\nVolumen de música\nVibración\nSí · No\nDesplazarse · Ajustar · B Volver",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 18,
+      "resource": "loc/english/interface/menu/menu2-musicon.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 19,
+      "resource": "loc/english/interface/menu/menu2-rumble.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Sonido\nVolumen de efectos\nVolumen de música\nVibración\nSí · No\nDesplazarse · Ajustar · B Volver",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 20,
+      "resource": "loc/english/interface/menu/menu2-sfx.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Sonido\nVolumen de efectos\nVolumen de música\nVibración\nSí · No\nDesplazarse · Ajustar · B Volver",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 21,
+      "resource": "loc/english/interface/menu/quit-no.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "¿Seguro que quieres salir?\nNo\nSí",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 22,
+      "resource": "loc/english/interface/menu/quit-yes.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "¿Seguro que quieres salir?\nNo\nSí",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 23,
+      "resource": "loc/english/interface/status/effect00.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 24,
+      "resource": "loc/english/interface/status/effect01.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 25,
+      "resource": "loc/english/interface/status/effect02.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 26,
+      "resource": "loc/english/interface/status/effect03.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 27,
+      "resource": "loc/english/interface/status/effect04.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 28,
+      "resource": "loc/english/interface/status/effect05.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 29,
+      "resource": "loc/english/interface/status/effect06.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 30,
+      "resource": "loc/english/interface/status/effect07.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 31,
+      "resource": "loc/english/interface/status/effect08.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 32,
+      "resource": "loc/english/interface/status/effect09.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 33,
+      "resource": "loc/english/interface/status/effect10.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 34,
+      "resource": "loc/english/interface/status/effect11.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 35,
+      "resource": "loc/english/interface/status/effect12.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 36,
+      "resource": "loc/english/interface/status/effect13.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 37,
+      "resource": "loc/english/interface/status/effect14.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 38,
+      "resource": "loc/english/interface/status/effect15.tif",
+      "locale": "es-ES",
+      "status": "no_text",
+      "text": "",
+      "footer": "",
+      "applied_to_texture": false
+    },
+    {
+      "id": 39,
+      "resource": "loc/english/interface/status/navbar.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "A B X Y para elegir poderes.\nBACK para continuar.",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 40,
+      "resource": "loc/english/interface/title/demooverlay.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa START para empezar. Pulsa BACK para salir.",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 41,
+      "resource": "loc/english/interface/title/overlay.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa START para jugar.",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 42,
+      "resource": "loc/english/interface/title/overlaywithdemos.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa START para jugar. Pulsa X para ver las demos.",
+      "footer": "",
+      "applied_to_texture": true
+    },
+    {
+      "id": 43,
+      "resource": "loc/english/popups/demo/demo_acid00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Usa tu bastón de ácido de nivel 2 para disolver este bloque de ácido.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 44,
+      "resource": "loc/english/popups/demo/demo_acid01.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Combina los elementos agua y tierra para crear el bastón de ácido.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 45,
+      "resource": "loc/english/popups/demo/demo_firewall00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Usa tu poder de agua para apagar este muro de fuego.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 46,
+      "resource": "loc/english/popups/demo/demo_firewallb00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Debes mejorar tu poder de agua para apagar este muro de fuego.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 47,
+      "resource": "loc/english/popups/demo/demo_ice00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Usa tu bastón de vapor de nivel 2 para derretir este bloque de hielo.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 48,
+      "resource": "loc/english/popups/demo/demo_ice01.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Combina los elementos agua y fuego para crear el bastón de vapor.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 49,
+      "resource": "loc/english/popups/demo/demo_intro00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Busca las cuatro mejoras de poder elemental para atravesar las barreras elementales.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 50,
+      "resource": "loc/english/popups/demo/demo_intro01.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Los símbolos deluvianos indican el nivel de poder necesario para atravesar estas barreras.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 51,
+      "resource": "loc/english/popups/demo/demo_jump00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Usa las alas de tu poder de aire para saltar más lejos y cruzar estos bloques.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 52,
+      "resource": "loc/english/popups/demo/demo_jump01.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa Y para saltar. Una vez en el aire, vuelve a pulsar Y para batir las alas.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 53,
+      "resource": "loc/english/popups/demo/demo_jumpb00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa Y para saltar y agarrarte al cable.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 78,
+      "resource": "loc/english/popups/6keys00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Solo puedes llevar cinco tipos distintos de llaves.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 79,
+      "resource": "loc/english/popups/a3safe00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Las válvulas están cerradas. Baja al depósito y configura el tobogán antes de intentar descender hasta el fondo.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 80,
+      "resource": "loc/english/popups/a3slide00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Abre todas las válvulas para bajar con seguridad por el tobogán superior y conseguir el fragmento. Las válvulas azules están abiertas y las rojas, cerradas. Cada interruptor cambia el estado de tres válvulas.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 81,
+      "resource": "loc/english/popups/a5cannon00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "¡Enhorabuena! Has eliminado el hielo de todas las conexiones del rotor.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 82,
+      "resource": "loc/english/popups/a5ladder00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Espera al pie de la escalera y un hidrotubo te llevará hasta una isla de cúmulos.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 83,
+      "resource": "loc/english/popups/air_powerup00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Los orbes amarillos reponen tu energía de aire.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 84,
+      "resource": "loc/english/popups/chromatic_powerup00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Los orbes multicolores reponen la energía de todos tus elementos.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 85,
+      "resource": "loc/english/popups/climb00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Busca enredaderas. Empuja el stick izquierdo hacia delante para trepar por ellas.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 86,
+      "resource": "loc/english/popups/collect_obsidians00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Si reúnes 10 obsidianas o más, puedes volver al Templo de los Elementos para obtener nuevas habilidades.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 87,
+      "resource": "loc/english/popups/d1nobridge00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Balthazar ha cortado la energía del puente que lleva de vuelta a la ciudad. ¡Corre a la planta principal de la torre de control para librar tu batalla final!",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 88,
+      "resource": "loc/english/popups/diamonds00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 100 diamantes para aumentar tu capacidad de energía de aire.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 89,
+      "resource": "loc/english/popups/e2silvertele00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Para activar los teletransportadores plateados, encuentra dos que estén conectados entre sí.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 90,
+      "resource": "loc/english/popups/e6daylight00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Solo puedes accionar los espejos durante el día.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 91,
+      "resource": "loc/english/popups/e6mirrors00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Alinea los espejos con las esferas solares para activar los rayos de transporte.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 92,
+      "resource": "loc/english/popups/earth_powerup00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Los orbes verdes reponen tu energía de tierra.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 93,
+      "resource": "loc/english/popups/emeralds00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 100 esmeraldas para aumentar tu capacidad de energía de tierra.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 94,
+      "resource": "loc/english/popups/fire_powerup00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Los orbes rojos reponen tu energía de fuego.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 95,
+      "resource": "loc/english/popups/firewall00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Este muro de fuego bloquea el camino a la ciudad. Para continuar, tendrás que apagarlo con tu poder de agua.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 96,
+      "resource": "loc/english/popups/gameover00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa A para continuar tu aventura.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 97,
+      "resource": "loc/english/popups/gem00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 100 gemas de cada tipo para aumentar tu capacidad de energía elemental.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 98,
+      "resource": "loc/english/popups/goldtele00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Los teletransportadores dorados siempre están activos.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 99,
+      "resource": "loc/english/popups/health00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "El círculo con musgo rojo te devolverá la salud.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 100,
+      "resource": "loc/english/popups/joystick00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa X para activar la palanca. Usa el stick izquierdo para manejarla. Vuelve a pulsar X para desactivarla.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 101,
+      "resource": "loc/english/popups/jump00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa Y mientras avanzas para saltar. También puedes pulsar Y mientras avanzas para subir a un saliente.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 102,
+      "resource": "loc/english/popups/key00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa X para introducir una llave en la cerradura correspondiente.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 103,
+      "resource": "loc/english/popups/life00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Usa el stick izquierdo para dirigir la llama piloto y encender los 20 núcleos de filamento.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 104,
+      "resource": "loc/english/popups/life01.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Evita las corrientes estabilizadoras amarillas.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 105,
+      "resource": "loc/english/popups/obsidian010_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 10 obsidianas para ampliar tu barra de vida.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 106,
+      "resource": "loc/english/popups/obsidian020_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 20 obsidianas para obtener la llave de la Cámara de la Vida del Templo de los Elementos.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 107,
+      "resource": "loc/english/popups/obsidian030_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 30 obsidianas para ampliar tu barra de vida.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 108,
+      "resource": "loc/english/popups/obsidian040_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 40 obsidianas para aumentar el poder de tu Axion.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 109,
+      "resource": "loc/english/popups/obsidian050_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 50 obsidianas para ampliar tu barra de vida.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 110,
+      "resource": "loc/english/popups/obsidian060_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 60 obsidianas para obtener la llave de la Cámara de los Elementos del Templo de los Elementos.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 111,
+      "resource": "loc/english/popups/obsidian070_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 70 obsidianas para ampliar tu barra de vida.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 112,
+      "resource": "loc/english/popups/obsidian080_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 80 obsidianas para aumentar el poder de tu Axion.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 113,
+      "resource": "loc/english/popups/obsidian090_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 90 obsidianas para ampliar tu barra de vida.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 114,
+      "resource": "loc/english/popups/obsidian100_00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne las 100 obsidianas y tus poderes elementales consumirán la mitad de energía.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 115,
+      "resource": "loc/english/popups/rubies00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 100 rubíes para aumentar tu capacidad de energía de fuego.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 116,
+      "resource": "loc/english/popups/sapphires00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Reúne 100 zafiros para aumentar tu capacidad de energía de agua.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 117,
+      "resource": "loc/english/popups/save_platform00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Súbete a estas plataformas circulares para guardar tu progreso.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 118,
+      "resource": "loc/english/popups/seal_air00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Necesitas tres fragmentos del disco del Aire para atravesar este sello.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 119,
+      "resource": "loc/english/popups/seal_death00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Necesitas los cinco discos elementales para atravesar este sello.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 120,
+      "resource": "loc/english/popups/seal_earth00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Necesitas tres fragmentos del disco de la Tierra para atravesar este sello.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 121,
+      "resource": "loc/english/popups/seal_fire00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Necesitas tres fragmentos del disco del Fuego para atravesar este sello.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 122,
+      "resource": "loc/english/popups/seal_life00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Necesitas tres fragmentos del disco de la Vida para atravesar este sello.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 123,
+      "resource": "loc/english/popups/seal_water00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Necesitas tres fragmentos del disco del Agua para atravesar este sello.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 124,
+      "resource": "loc/english/popups/swim00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Para nadar, usa el stick izquierdo para desplazarte por el agua. Pulsa Y para ascender y A para descender.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 125,
+      "resource": "loc/english/popups/switch00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa el botón de acción X para activar un interruptor.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 126,
+      "resource": "loc/english/popups/training100.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Bienvenido a la arena de entrenamiento, joven guardián.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 127,
+      "resource": "loc/english/popups/training101.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Para terminar el entrenamiento, sal de la arena y pulsa el botón de acción X.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 128,
+      "resource": "loc/english/popups/training102.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Tu primer reto consiste en destruir los cinco jarrones naranjas del suelo de la arena. Pulsa A para dar una estocada y B para realizar un barrido.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 129,
+      "resource": "loc/english/popups/training200.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Ahora aprenderás a dominar los poderes de los elementos.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 130,
+      "resource": "loc/english/popups/training201.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "1. Mantén pulsado el gatillo izquierdo.\n2. Pulsa A (tierra).\n3. Suelta el gatillo izquierdo.\nAsí invocarás tu armadura de tierra.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 131,
+      "resource": "loc/english/popups/training300.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Ahora combina elementos para invocar tu poder de lava.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 132,
+      "resource": "loc/english/popups/training301.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "1. Mantén pulsado el gatillo izquierdo.\n2. Pulsa A (tierra).\n3. Pulsa B (fuego).\n4. Suelta el gatillo izquierdo.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 133,
+      "resource": "loc/english/popups/training400.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Ahora usa tu poder demoledor para destruir los cinco jarrones morados que hay en los bordes del suelo de la arena.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 134,
+      "resource": "loc/english/popups/training4p00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Usa el stick derecho para mirar al techo. Allí encontrarás la combinación de elementos del poder demoledor.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 135,
+      "resource": "loc/english/popups/training4p01.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Aplica el poder demoledor a tu Axion.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 136,
+      "resource": "loc/english/popups/training500.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Usa lo que has aprendido para luchar contra estos cosechadores. Aunque parezcan tímidos, son peligrosos en grupo.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 137,
+      "resource": "loc/english/popups/training501.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa el gatillo derecho para colocar la cámara detrás de ti. Te resultará útil durante los combates.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 138,
+      "resource": "loc/english/popups/training502.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Puedes aturdir a un enemigo con una estocada pulsando A. Encadena varias estocadas para obtener el mejor resultado.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 139,
+      "resource": "loc/english/popups/training600.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Ahora lucharás contra algo un poco más peligroso. Un Sleeth debería suponer un buen reto.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 140,
+      "resource": "loc/english/popups/training601.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa Y y, rápidamente, B para realizar un golpe aplastante desde arriba.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 141,
+      "resource": "loc/english/popups/training602.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Prueba qué poder causa más daño a cada enemigo.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 142,
+      "resource": "loc/english/popups/w1periscope00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Acércate al periscopio y pulsa X para activarlo.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 143,
+      "resource": "loc/english/popups/w1torpedo00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Usa el stick izquierdo para apuntar con el periscopio.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 144,
+      "resource": "loc/english/popups/w1torpedo01.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Pulsa X para disparar el torpedo.",
+      "footer": "B Volver · A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 145,
+      "resource": "loc/english/popups/w2firewall00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Puedes usar tu poder de agua para apagar un muro de fuego.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 146,
+      "resource": "loc/english/popups/w2spout00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Primero debes activar el surtidor de agua para poder apagar con él el anillo de fuego.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 147,
+      "resource": "loc/english/popups/water_powerup00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Los orbes azules reponen tu energía de agua.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    },
+    {
+      "id": 148,
+      "resource": "loc/english/popups/waterspout00.tif",
+      "locale": "es-ES",
+      "status": "translated",
+      "text": "Has activado el surtidor de agua. Ahora busca la palanca de control para apagar el anillo de fuego.",
+      "footer": "A Continuar",
+      "applied_to_texture": true
+    }
+  ],
+  "plain_text": [
+    {
+      "source": "Start New Game",
+      "text": "Nueva partida"
+    },
+    {
+      "source": "SaveGame #%d",
+      "text": "Partida #%d"
+    },
+    {
+      "source": "1 day",
+      "text": "1 día"
+    },
+    {
+      "source": "%d days",
+      "text": "%d días"
+    }
+  ],
+  "integration": "Packaged in localization/es-ES; select Castellano in launcher; in-game validation pending."
+}
