@@ -72,12 +72,29 @@ LONG WINAPI WriteCrashDump(EXCEPTION_POINTERS* e) {
     return EXCEPTION_CONTINUE_SEARCH;
 }
 
+// Read diagnostic memory through the OS: guest registers may contain stale or
+// unmapped pointers. Never dereference them while reporting an existing hang.
+void LogGuestObject(uint32_t address) {
+    if (!kernel::g_base || address < 0x10000 || address > 0xFFFFFFBFu) return;
+    uint32_t words[16]{};
+    SIZE_T read = 0;
+    if (!ReadProcessMemory(GetCurrentProcess(), kernel::HostPtr(address), words, sizeof(words), &read) || read != sizeof(words)) return;
+    for (unsigned i = 0; i < 16; i += 4)
+        LOGI("hang-memory %08X: %08X %08X %08X %08X", address + i * 4,
+             words[i], words[i + 1], words[i + 2], words[i + 3]);
+}
+
 void DumpThreads() {
     gpu::g_capture = true;
     for (auto& t : kernel::Threads())
         if (t->ctx) {
             LOGI("thread %X", t->id);
             kernel::LogGuestStack(*t->ctx, 32);
+            // Object pointers and intrusive-list links are needed to distinguish
+            // a busy loader from a damaged list. Minidumps omit most guest RAM.
+            LogGuestObject(t->ctx->ecx);
+            LogGuestObject(t->ctx->esi);
+            LogGuestObject(t->ctx->edi);
         }
     // A render capture cannot finish if a guest thread is blocked. Preserve
     // native stacks as well so F3 can diagnose a hang without a GPU frame.

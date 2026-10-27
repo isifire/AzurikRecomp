@@ -107,3 +107,20 @@ for name in ("x86_recomp.31.cpp", "x86_recomp.32.cpp"):
 # every virtual render call and copied whole lists to locate the mutation; that
 # work is deliberately omitted here because it causes frame-time spikes.
 
+
+# Audio worker: a retired intrusive-list node links back to itself. Continuing
+# through it holds 0x1BEFAC forever and blocks zone loading (observed in two F3
+# snapshots on 2026-10-27). End this pass through the existing unlock path;
+# never rewrite the list or dispatch a virtual callback on a retired node.
+path = root / 'x86_recomp.28.cpp'
+source = path.read_text()
+for anchor in ('loc_000AE4B0:\n', '\t// 000AE4C0 mov esi, [esi]\n'):
+    marker = '// Azurik retired audio node guard ' + ('before' if anchor.startswith('loc') else 'after')
+    if marker not in source:
+        if source.count(anchor) != 1:
+            raise RuntimeError('Audio traversal anchor changed: ' + anchor)
+        guard = ('\t' + marker + '\n'
+                 '\tif (X86_MEM32(ctx.esi) == ctx.esi && X86_MEM32(ctx.esi + 4u) == ctx.esi) goto loc_000AE4CA;\n')
+        source = source.replace(anchor, anchor + guard if anchor.startswith('loc') else guard + anchor, 1)
+if path.read_text() != source:
+    path.write_text(source)
