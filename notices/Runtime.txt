@@ -1,0 +1,3 @@
+The release includes CPython 3.12, Pillow 12.2.0 and the PyInstaller 6.22.3 bootloader for offline setup. Their notices are included here.
+Microsoft Visual C++ runtime libraries are deployed app-local from the Visual Studio redistributable directory. They remain Microsoft components, not MIT-licensed project code.
+Deployment reference: https://learn.microsoft.com/en-us/cpp/windows/deployment-in-visual-cpp

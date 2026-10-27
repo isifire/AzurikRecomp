@@ -50,7 +50,7 @@ internal sealed class Launcher : Form {
         status.Text = "Los cambios se aplican al iniciar el juego."; status.Dock = DockStyle.Fill; status.TextAlign = ContentAlignment.MiddleLeft; status.AutoEllipsis = true;
         bottom.Controls.Add(status, 0, 0);
         var save = Button("Guardar"); save.Click += (s,e) => Save(false); bottom.Controls.Add(save, 1, 0);
-        var play = Button("Guardar y jugar"); play.BackColor = Color.FromArgb(41, 110, 133); play.Click += (s,e) => Save(true); bottom.Controls.Add(play, 2, 0);
+        var play = Button("Guardar y jugar"); play.BackColor = Color.FromArgb(41, 110, 133); play.Click += async (s,e) => {if(await PrepareGame())Save(true);}; bottom.Controls.Add(play, 2, 0);
         outer.Controls.Add(bottom, 0, 2); Controls.Add(outer);
         try { LoadValues(); } catch(Exception ex) { MessageBox.Show(this, "No se pudieron leer los ajustes: " + ex.Message, "Azurik", MessageBoxButtons.OK, MessageBoxIcon.Warning); }
     }
@@ -58,32 +58,38 @@ internal sealed class Launcher : Form {
     TabPage GameTab() {
         var tab=new TabPage("Juego") {BackColor=Color.FromArgb(32,38,50),ForeColor=Color.White};
         var grid=Grid(7);tab.Controls.Add(grid);Add(grid,0,"Tu copia del juego",gameSource);
-        var iso=new Button {Text="Elegir ISO / XISO"};iso.Click+=(s,e)=>{using(var d=new OpenFileDialog {Filter="Imagen Xbox|*.iso;*.xiso|Todos los archivos|*.*"})if(d.ShowDialog(this)==DialogResult.OK)gameSource.Text=d.FileName;};Add(grid,1,"Imagen de disco",iso);
-        var folder=new Button {Text="Elegir carpeta extraída"};folder.Click+=(s,e)=>{using(var d=new FolderBrowserDialog {Description="Carpeta que contiene default.xbe",ShowNewFolderButton=false})if(d.ShowDialog(this)==DialogResult.OK)gameSource.Text=d.SelectedPath;};Add(grid,2,"XISO extraído",folder);
-        var prepare=new Button {Text="Preparar / castellano"};prepare.Click+=(s,e)=>PrepareGame();Add(grid,3,"Primera instalación",prepare);
+        var iso=new Button {Text="Elegir ISO / XISO"};iso.Click+=async (s,e)=>{using(var d=new OpenFileDialog {Filter="Imagen Xbox|*.iso;*.xiso|Todos los archivos|*.*"})if(d.ShowDialog(this)==DialogResult.OK){gameSource.Text=d.FileName;await PrepareGame();}};Add(grid,1,"Imagen de disco",iso);
+        var folder=new Button {Text="Elegir carpeta extraída"};folder.Click+=async (s,e)=>{using(var d=new FolderBrowserDialog {Description="Carpeta que contiene default.xbe",ShowNewFolderButton=false})if(d.ShowDialog(this)==DialogResult.OK){gameSource.Text=d.SelectedPath;await PrepareGame();}};Add(grid,2,"XISO extraído",folder);
+        var prepare=new Button {Text="Comprobar instalación"};prepare.Click+=async (s,e)=>{await PrepareGame();};Add(grid,3,"Preparación automática",prepare);
         AddText(grid,4,"Aporta tu propia copia. El proyecto no incluye archivos del juego.");
-        AddText(grid,5,"Paquete precompilado: selecciona tu copia y pulsa Guardar y jugar.");
-        AddText(grid,6,"Preparar genera el castellano (requiere Python y Pillow). Desde código también compila.");return tab;
+        AddText(grid,5,"Al elegir tu copia se preparan automáticamente ambos idiomas y todas las mejoras.");
+        AddText(grid,6,"No necesitas instalar herramientas ni compilar. El proceso funciona sin Internet.");return tab;
     }
     bool SaveSource() {
         if(!File.Exists(gameSource.Text) && !Directory.Exists(gameSource.Text)) {MessageBox.Show(this,"Selecciona tu ISO/XISO o carpeta extraída en Juego.");return false;}
         WriteFile(Path.Combine(root,"game-source.txt"),gameSource.Text);return true;
     }
-    async void PrepareGame() {
-        if(!SaveSource())return;
-        Enabled=false;status.Text="Preparando el juego; puede tardar varios minutos…";
+    async Task<bool> PrepareGame() {
+        if(!File.Exists(gameSource.Text) && !Directory.Exists(gameSource.Text)) {MessageBox.Show(this,"Selecciona tu ISO/XISO o carpeta extraída en Juego.");return false;}
+        string helper=Path.Combine(root,"installer","PrepararJuego.exe");
+        if(!File.Exists(helper)||!File.Exists(GamePath)){MessageBox.Show(this,"Faltan componentes. Descarga y extrae el paquete completo de la versión publicada.");return false;}
+        Enabled=false;status.Text="Comprobando tu copia…";
         try {
+            WriteFile(Path.Combine(root,"prepare-source.txt"),gameSource.Text);
+            string last="";
             int result=await Task.Run(()=>{
-                var start=new ProcessStartInfo {FileName="cmd.exe",Arguments=File.Exists(GamePath)?"/d /c Preparar-Traduccion.bat":"/d /c build.bat",WorkingDirectory=root,UseShellExecute=false,CreateNoWindow=true,RedirectStandardOutput=true,RedirectStandardError=true};
+                var start=new ProcessStartInfo {FileName=helper,WorkingDirectory=root,UseShellExecute=false,CreateNoWindow=true,RedirectStandardOutput=true,RedirectStandardError=true,StandardOutputEncoding=Encoding.UTF8,StandardErrorEncoding=Encoding.UTF8};
                 using(var log=new StreamWriter(Path.Combine(root,"setup.log"),false,new UTF8Encoding(false)))
                 using(var p=new Process {StartInfo=start}) {
-                    object gate=new object();p.OutputDataReceived+=(s,e)=>{if(e.Data!=null)lock(gate){log.WriteLine(e.Data);log.Flush();}};
-                    p.ErrorDataReceived+=(s,e)=>{if(e.Data!=null)lock(gate){log.WriteLine(e.Data);log.Flush();}};
+                    object gate=new object();
+                    DataReceivedEventHandler receive=(s,e)=>{if(e.Data!=null){lock(gate){last=e.Data;log.WriteLine(e.Data);log.Flush();}if(IsHandleCreated&&!IsDisposed)BeginInvoke((Action)(()=>status.Text=e.Data));}};
+                    p.OutputDataReceived+=receive;p.ErrorDataReceived+=receive;
                     p.Start();p.BeginOutputReadLine();p.BeginErrorReadLine();p.WaitForExit();return p.ExitCode;
                 }
             });
-            status.Text=result==0?"Preparación terminada. Ya puedes guardar y jugar.":"No se pudo preparar. Consulta setup.log y los requisitos de README.";
-        }catch(Exception ex){status.Text="Error: "+ex.Message;}finally{Enabled=true;}
+            if(result!=0){status.Text="No se pudo preparar la copia.";MessageBox.Show(this,last,"Preparación",MessageBoxButtons.OK,MessageBoxIcon.Error);return false;}
+            status.Text="Listo. Ambos idiomas y todas las mejoras están disponibles.";return true;
+        }catch(Exception ex){MessageBox.Show(this,ex.Message,"Preparación",MessageBoxButtons.OK,MessageBoxIcon.Error);return false;}finally{Enabled=true;}
     }
     TabPage LanguageTab() {
         var tab = new TabPage("Idioma") { BackColor = Color.FromArgb(32, 38, 50), ForeColor = Color.White };

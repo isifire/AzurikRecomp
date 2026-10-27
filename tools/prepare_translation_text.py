@@ -1,6 +1,7 @@
 import json
 from pathlib import Path
-root=Path(__file__).resolve().parents[1]
+import os
+root=Path(os.environ.get('AZURIK_PACKAGE_ROOT',Path(__file__).resolve().parents[1]))
 rows=json.loads((root/'translation/es/textos.es-ES.json').read_text(encoding='utf-8'))['plain_text']
 original=(root/'assets/english.txt').read_text(encoding='utf-16')
 for row in rows:

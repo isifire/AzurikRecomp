@@ -1,9 +1,10 @@
 """Encode the localized UI mipmaps into same-size XBR surface resources."""
 from pathlib import Path
+import os
 import json,io,hashlib,sys
 large="--large" in sys.argv
 from PIL import Image
-root=Path(__file__).resolve().parents[1]
+root=Path(os.environ.get('AZURIK_PACKAGE_ROOT',Path(__file__).resolve().parents[1]))
 m=json.loads((root/'translation/manifest.json').read_text());original=(root/'assets/gamedata/english.xbr').read_bytes()
 assert hashlib.sha256(original).hexdigest()==m['source_sha256']
 output=root/('translation/es/resources-large' if large else 'translation/es/resources');output.mkdir(exist_ok=True)

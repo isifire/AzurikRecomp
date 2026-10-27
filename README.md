@@ -9,9 +9,12 @@ Recompilación experimental para Windows de **Azurik: Rise of Perathia**, de Xbo
 1. Descarga y extrae el ZIP de [Releases](https://github.com/isifire/AzurikRecomp/releases) en una carpeta donde tengas permiso de escritura.
 2. Abre `Lanzador.exe`, pestaña **Juego**.
 3. Elige tu ISO/XISO o la carpeta extraída que contiene `default.xbe` y las carpetas del juego.
-4. Ajusta gráficos y controles, elige **English** y pulsa **Guardar y jugar**. No necesitas compilar ni copiar toda la ISO.
+4. Espera a que el lanzador prepare automáticamente el juego y los textos. La primera preparación puede tardar unos minutos; verás el progreso en la ventana.
+5. Elige **English** o **Castellano**, configura gráficos, filtros, controles y texto ampliado, y pulsa **Guardar y jugar**.
 
-Requisitos: Windows 10/11 de 64 bits, CPU x86-64-v2, GPU compatible con Direct3D 12 y Microsoft Visual C++ Redistributable x64. El juego se lee desde la ruta seleccionada, que debe permanecer accesible. No se modifica la copia original.
+**No necesitas compilar, instalar Python ni descargar herramientas.** Todos los componentes de preparación están incluidos y funcionan sin conexión. Descarga el ZIP `AzurikRecomp-windows-x64-experimental.zip` de la versión **v0.2.0-experimental o posterior**, no el archivo de código fuente de GitHub.
+
+Requisitos: Windows 10/11 de 64 bits con .NET Framework 4.8, CPU x86-64-v2 y GPU compatible con Direct3D 12. Las bibliotecas Visual C++ necesarias se incluyen junto al ejecutable. El juego se lee desde la ruta seleccionada, que debe permanecer accesible. No se modifica la copia original.
 
 ### Versión compatible
 
@@ -21,13 +24,9 @@ Esta compilación solo admite el `default.xbe` cuyo SHA-1 es:
 
 Title ID: `4D530007`. Otras ediciones requieren adaptar y verificar la recompilación; se rechazan para evitar ejecutar código incompatible. Se admiten imágenes XISO y volcados con partición Xbox en `0x18300000`, sin comprimir. No se admiten ZIP, CHD ni discos divididos.
 
-### Castellano opcional
+### Castellano integrado
 
-Los menús y tutoriales originales son imágenes. El repositorio distribuye el catálogo traducido y las herramientas, **no las imágenes modificadas**.
-
-1. Instala Python 3.11 o posterior y `python -m pip install Pillow==12.2.0`.
-2. Elige tu copia en **Juego** y pulsa **Preparar / castellano**. Se leen solo las entradas necesarias y se generan paquetes locales.
-3. En **Idioma**, elige **Castellano**. Puedes activar letra ampliada.
+Al seleccionar la copia del juego, el lanzador genera localmente los textos traducidos y su variante ampliada. Puedes cambiar de idioma antes de jugar en los ajustes. Los originales necesarios se leen de tu copia: no se distribuyen en el paquete.
 
 Botones del mando con iconos y paneles oscuros opacos. Las voces siguen en inglés. La letra ampliada se aplica a avisos/tutoriales; no añade subtítulos a cinemáticas. Al reasignar el mando, los avisos muestran el botón lógico original.
 
@@ -42,24 +41,9 @@ Botones del mando con iconos y paneles oscuros opacos. Las voces siguen en ingl�
 
 La configuración, partidas, cachés y registros quedan dentro de esta instalación. No publiques `assets`, `generated`, `out`, partidas, volcados o registros con datos personales. Para reportar problemas, indica versión, GPU y pasos para reproducirlo; revisa cualquier archivo antes de adjuntarlo.
 
-## Compilar desde código
+## Desarrollo
 
-Instala Git, Python 3.11+, Visual Studio 2022 / Build Tools con **Desarrollo para el escritorio con C++**, Windows SDK, herramientas LLVM/Clang y CMake/Ninja (componentes de Visual Studio o instalaciones en PATH).
-
-1. Clona el repositorio.
-2. Ejecuta `Jugar.bat` para compilar y abrir el lanzador.
-3. Elige tu ISO/carpeta y pulsa **Preparar / castellano**. La primera ejecución sin `Azurik.exe` ejecuta `build.bat` y recompila tu propio XBE.
-4. Espera a que termine. `setup.log` contiene la salida de preparación. Luego guarda y juega.
-
-Alternativa de terminal:
-
-```powershell
-python tools/prepare_game.py "D:\Mis juegos\Azurik.iso"
-.\build.bat
-.\Compilar-Lanzador.bat
-```
-
-Se necesita Internet para descargar las dependencias fijadas en `sdk/cmake/XbeRecomp.cmake`. No se descarga el juego. Los parches de recompilación se aplican automáticamente mediante CMake. Los fuentes generados y las entradas originales permanecen ignorados por Git.
+El código y las instrucciones para desarrolladores están en el [repositorio](https://github.com/isifire/AzurikRecomp), en `docs/DEVELOPMENT.md`. Compilar es únicamente para quienes quieran modificar el proyecto.
 
 ## Pruebas y licencias
 

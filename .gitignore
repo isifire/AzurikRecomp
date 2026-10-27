@@ -35,3 +35,8 @@ CrashDumps/
 hdd/
 .vs/
 *.log
+
+/installer/
+/prepare-source.txt
+/.prepared.json
+*.spec
