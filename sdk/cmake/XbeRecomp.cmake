@@ -21,6 +21,8 @@ set(SDL_RENDER OFF CACHE BOOL "" FORCE)
 set(SDL_GPU OFF CACHE BOOL "" FORCE)
 set(SDL_CAMERA OFF CACHE BOOL "" FORCE)
 FetchContent_Declare(SDL3 GIT_REPOSITORY https://github.com/libsdl-org/SDL.git GIT_TAG release-3.4.16 GIT_SHALLOW TRUE)
+# The UCRT exports _itoa; SDL has a portable fallback for the legacy itoa alias.
+set(LIBC_HAS_ITOA "" CACHE INTERNAL "Use SDL portable integer conversion" FORCE)
 FetchContent_MakeAvailable(zydis tomlplusplus imgui SDL3)
 
 # x86 to C++ recompiler
