@@ -250,12 +250,13 @@ internal sealed class Launcher : Form {
         ini=SetIni(ini,"controller","vibration",vibration.Value.ToString(CultureInfo.InvariantCulture));
         for(int j=0;j<16;j++)ini=SetIni(ini,"gamepad",padIds[j],(padButtons[j].SelectedIndex-1).ToString(CultureInfo.InvariantCulture));
         WriteFile(SettingsPath,t);WriteFile(ControlsPath,ini);status.Text="Opciones guardadas.";
-        if(play){if(!File.Exists(GamePath)){MessageBox.Show(this,"No se encontró Azurik.exe. Compila el juego primero.","Azurik",MessageBoxButtons.OK,MessageBoxIcon.Warning);return;}
+        if(play){if(!File.Exists(GamePath)){MessageBox.Show(this,"Falta Azurik.exe. Vuelve a extraer el paquete completo de la versión publicada.","Azurik",MessageBoxButtons.OK,MessageBoxIcon.Warning);return;}
             var start=new ProcessStartInfo { FileName=GamePath,WorkingDirectory=Path.GetDirectoryName(GamePath),UseShellExecute=false };
             // F3 captures one GPU frame for diagnosing camera dependent particles.
             // No continuous tracing is enabled, so normal play has no extra cost.
             start.EnvironmentVariables["XBE_CAPTURE_DIR"]="captures";
             if(diagnostic.Checked) start.EnvironmentVariables["XBE_PERF"]="1";
+            else start.EnvironmentVariables.Remove("XBE_PERF");
             Process.Start(start); Close(); }
     } catch(Exception ex){MessageBox.Show(this,"No se pudieron guardar las opciones: "+ex.Message,"Azurik",MessageBoxButtons.OK,MessageBoxIcon.Error);}
     }

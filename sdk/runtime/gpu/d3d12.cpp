@@ -1887,9 +1887,10 @@ ID3D12Resource* D3D12Backend::BindGuestTexture(const State& s, int stage, const 
         tx.frame = presents_ + 1;
         tx.palette = palette.hash;
         const uint8_t* p = static_cast<const uint8_t*>(kernel::HostPtr(d.data));
-        auto perf_t = PerfClock::now();
+        const bool timed = diag::Perf();
+        auto perf_t = timed ? PerfClock::now() : PerfClock::time_point{};
         uint64_t sig = MemSig(d.data, total) ^ DirtyEpoch(d.data) ^ palette.hash;
-        g_perf.sig += PerfMs(perf_t);
+        if (timed) g_perf.sig += PerfMs(perf_t);
         if (sig != tx.sig || !same) {
             PerfScope perf_up{g_perf.texup};
             g_perf.texups++;
@@ -2053,11 +2054,12 @@ void D3D12Backend::EnsureVertexShader(const State& s, const Assembled& a, DrawSh
 }
 
 bool D3D12Backend::BindStageTexturesAndTargets(const State& s, DrawTextures& stages) {
-    auto perf_t = PerfClock::now();
+    const bool timed = diag::Perf();
+    auto perf_t = timed ? PerfClock::now() : PerfClock::time_point{};
     draw_rt_ = bound_rt_;
     draw_ds_ = bound_ds_;
     for (int i = 0; i < 4; i++) stages.res[i] = BindTexture(s, i, stages);
-    g_perf.bind += PerfMs(perf_t);
+    if (timed) g_perf.bind += PerfMs(perf_t);
     // textures may have recorded copies that unbound the targets
     return BindTargets(s);
 }
@@ -2562,9 +2564,10 @@ struct DrawEnd {
 // Assemble, timed and counted
 bool D3D12Backend::AssembleDraw(const State& s, uint32_t prim, uint32_t start, uint32_t count,
                                 const uint8_t* indices, Assembled& a) {
-    auto perf_t = PerfClock::now();
+    const bool timed = diag::Perf();
+    auto perf_t = timed ? PerfClock::now() : PerfClock::time_point{};
     bool assembled = Assemble(s, prim, start, count, indices, a);
-    g_perf.assemble += PerfMs(perf_t);
+    if (timed) g_perf.assemble += PerfMs(perf_t);
     g_perf.verts += a.vertex_count;
     g_perf.raw += a.vertices.empty();
     return assembled;
