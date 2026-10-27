@@ -19,3 +19,8 @@ jobs:
       - name: Compile launcher without game files
         shell: cmd
         run: Compilar-Lanzador.bat
+      - name: Test source selector without launching game
+        shell: cmd
+        run: |
+          "%WINDIR%\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /r:System.Windows.Forms.dll /r:System.Drawing.dll /out:tests\TestLauncherSource.exe tests\TestLauncherSource.cs
+          tests\TestLauncherSource.exe

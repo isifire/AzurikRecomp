@@ -34,3 +34,4 @@ logs/
 CrashDumps/
 hdd/
 .vs/
+*.log
